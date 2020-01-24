@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 
-//import action from actions//
+import { add_smurf } from "../actions/index";
 
 const NewSmurf = props => {
   const [smurf, setSmurf] = useState({ name: "", age: "", height: "" });
@@ -12,15 +12,19 @@ const NewSmurf = props => {
   }
     
   //Log the new values for each smurg
-  const smurfValues = e => {
-      e.preventDefault();
-      props.
-  }
-};
+  const smurfValues = event => {
+    event.preventDefault();
+    props.add_smurf(smurf);
+    setSmurf({
+      name: "",
+      age: "",
+      height: ""
+    });
+  };
 
 return (
-  <form onSubmit={}>
-    <label>Name</label>
+  <form onSubmit={smurfValues}>
+    <label>Name: </label>
     <input
       maxLength="15"
       type="text"
@@ -31,7 +35,7 @@ return (
       placeholder="Enter Name"
     />
 
-    <label>Age</label>
+    <label>Age: </label>
     <input
       maxLength="3"
       type="number"
@@ -42,7 +46,7 @@ return (
       placeholder="Enter Age"
     />
 
-    <label>Name</label>
+    <label>Height: </label>
     <input
       maxLength="3"
       type="text"
@@ -54,5 +58,5 @@ return (
     />
   </form>
 );
-
-export default connect(null, {})(AddSmurf);
+}
+export default connect(null, {add_smurf})(NewSmurf);

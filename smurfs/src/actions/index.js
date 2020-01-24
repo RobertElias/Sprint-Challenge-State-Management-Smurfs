@@ -23,9 +23,9 @@ export const ADD_SMURF_SUCCESS = 'ADD_SMURF_SUCCESS';
 export const ADD_SMURF_FAILURE = 'ADD_SMURF_FAILURE';
 
 export const add_smurf = (smurf) => (dispatch) => {
-  dispatch({type: NEW_SMURF_FETCH_REQUEST});
+  dispatch({type: ADD_SMURF_FETCH_REQUEST});
 
   return axios.post('http://localhost:3333/smurfs', smurf)
-    .then(response => dispatch({type: NEW_SMURF_SUCCESS, payload: response.data}))
-    .catch(error => dispatch({type: NEW_SMURF_FAILURE, payload: error}));
+    .then(response => dispatch({type: ADD_SMURF_SUCCESS, payload: response.data}))
+    .catch(error => dispatch({type: ADD_SMURF_FAILURE, payload: error}));
 };
