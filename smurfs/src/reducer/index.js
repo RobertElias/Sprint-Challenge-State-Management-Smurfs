@@ -7,6 +7,12 @@ import {
   ADD_SMURF_FAILURE
 } from "../actions";
 
+const initialState = {
+  smurfs: [],
+  isFetching: false,
+  error: ''
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case START_FETCHING:

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import NewSmurf from './Form';
+
 class App extends Component {
   render() {
     return (
@@ -10,7 +10,7 @@ class App extends Component {
         <div>Start inside of your `src/index.js` file!</div>
         <div>Have fun!</div>
         <h1>Import Smurfs in here</h1>
-        <NewSmurf/>
+        
       </div>
     );
   }
