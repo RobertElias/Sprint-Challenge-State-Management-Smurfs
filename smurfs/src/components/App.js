@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import NewSmurf from './Form'
+import NewSmurf from './Form';
 class App extends Component {
   render() {
     return (

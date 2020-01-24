@@ -60,6 +60,7 @@ return (
       value={smurf.height}
       placeholder="Enter Height in cm"
     />
+    <button onClick={smurfValues}>Add Your Smurf!!!</button>
   </form>
 );
 }
