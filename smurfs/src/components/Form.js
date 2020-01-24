@@ -8,7 +8,7 @@ const NewSmurf = props => {
 
   //handle change
   const handleChanges = e => {
-      setSmurf({...smurf, [e.target,name]: e.target.value})
+      setSmurf({...smurf, [e.target.name]: e.target.value})
   }
     
   //Log the new values for each smurg
