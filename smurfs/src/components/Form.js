@@ -4,7 +4,11 @@ import { connect } from "react-redux";
 import { add_smurf } from "../actions/index";
 
 const NewSmurf = props => {
-  const [smurf, setSmurf] = useState({ name: "", age: "", height: "" });
+  const [smurf, setSmurf] = useState({ 
+      name: "", 
+      age: "", 
+      height: "" 
+    });
 
   //handle change
   const handleChanges = e => {
